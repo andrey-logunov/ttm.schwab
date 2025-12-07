@@ -3,7 +3,27 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fake\json\account.json" />
+    <None Remove="fake\json\equities.json" />
+    <None Remove="fake\json\optionchain.json" />
+    <None Remove="fake\json\orders.json" />
+    <None Remove="fake\json\quotes.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="fake\json\account.json" />
+    <EmbeddedResource Include="fake\json\equities.json" />
+    <EmbeddedResource Include="fake\json\optionchain.json" />
+    <EmbeddedResource Include="fake\json\orders.json" />
+    <EmbeddedResource Include="fake\json\quotes.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
 
 </Project>
